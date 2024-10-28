@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore - Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* General Colors */
+        body {
+            color: #4b0082;
+            background-color: #f8f9fa;
+        }
+        .bg-purple {
+            background-color: #4b0082 !important;
+        }
+        .text-purple {
+            color: #4b0082 !important;
+        }
+        
+        /* Hero Section */
+        .jumbotron {
+            background: linear-gradient(to right, #4b0082, #8a2be2);
+            color: white;
+        }
+        
+        /* Product Cards */
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-purple sticky-top">
+    <a class="navbar-brand" href="#">MyStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#productsSection">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#aboutSection">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contactSection">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+        <h1 class="display-4">Welcome to MyStore</h1>
+        <p class="lead">Discover amazing products at unbeatable prices!</p>
+        <a href="#productsSection" class="btn btn-light btn-lg">Shop Now</a>
+    </div>
+</div>
+
+<!-- Products Section -->
+<div id="productsSection" class="container my-5 fade-in">
+    <h2 class="text-center text-purple mb-4">Our Products</h2>
+    <div class="row">
+        <!-- Product Card 1 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="./asset/pexels-webdonut-19090.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Product 1</h5>
+                    <p class="card-text">$25.00</p>
+                    <button class="btn btn-purple text-white">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="./asset/pexels-nietjuh-934070.jpg" class="card-img-top" alt="Product 2">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Product 2</h5>
+                    <p class="card-text">$35.00</p>
+                    <button class="btn btn-purple text-white">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="./asset/pexels-nietjuh-934070.jpg" class="card-img-top" alt="Product 3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Product 3</h5>
+                    <p class="card-text">$45.00</p>
+                    <button class="btn btn-purple text-white">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="aboutSection" class="container my-5 fade-in">
+    <h2 class="text-center text-purple mb-4">About Us</h2>
+    <p class="text-center">MyStore brings you a curated selection of the best products. We are committed to providing high-quality items at affordable prices. Explore our collections and find what fits you best!</p>
+</div>
+
+<!-- Contact Section -->
+<div id="contactSection" class="container my-5 fade-in">
+    <h2 class="text-center text-purple mb-4">Contact Us</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-purple text-white">Submit</button>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer class="bg-purple text-white text-center p-3 mt-5">
+    &copy; 2024 MyStore. All rights reserved.
+</footer>
+
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Smooth Scroll Script -->
+<script>
+    $(document).ready(function(){
+        $('a.nav-link').on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800);
+            }
+        });
+    });
+</script>
+</body>
+</html>
